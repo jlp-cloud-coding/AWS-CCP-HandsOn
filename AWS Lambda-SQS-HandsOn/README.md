@@ -33,17 +33,28 @@ presence of keyword "AWS" in the message
 - Enter message body: `"This is a test message and it has AWS keyword"`
 - Click **Send message**
 
-### 3. Create a Lambda Function
+##ADD IAM role creation TODO for author from scratch
+
+### 3. Create a Lambda Function (from scratch)
 - Go to Lambda in AWS Console
 - Click **Create function**
 - Choose **Author from scratch**
 - Name: `MyTestLambdaSQSProcessor`
 - Runtime: Python 3.13
-- Role: **Create new role from AWS policy templates**
+- Permissions → Choose existing role → select MyTestDemoRole
+- Click **Create function**
+
+### 3a. Create a Lambda Function (using blueprint)
+- Go to Lambda in AWS Console
+- Click **Create function**
+- Choose **Using Blueprint**
+- Name: `MyTestLambdaSQSProcessor`
+- Runtime(nodejs) and Architecture are populated by default
+- Execution Role: **Create new role from AWS policy templates**
 - Select policy template: **Amazon SQS Poller**
 - Click **Create function**
 
-### 4. Add Lambda Code to process messages from SQS and print the word count in each message and log the message as `Cloud` or `Default`.Click Deploy for the changes to take effect.
+### 4. Add Lambda Code to process messages from SQS. Click on Deploy for the changes to take effect.
 
 ### 5. Connect Lambda to SQS
 - Go to Function Overview → **Add trigger**
