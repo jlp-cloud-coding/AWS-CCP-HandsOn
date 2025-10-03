@@ -33,8 +33,6 @@ presence of keyword "AWS" in the message
 - Enter message body: `"This is a test message and it has AWS keyword"`
 - Click **Send message**
 
-##ADD IAM role creation TODO for author from scratch
-
 ### 3. Create a Lambda Function (from scratch)
 - Go to Lambda in AWS Console
 - Click **Create function**
@@ -43,6 +41,13 @@ presence of keyword "AWS" in the message
 - Runtime: Python 3.13
 - Permissions → Choose existing role → select MyTestDemoRole
 - Click **Create function**
+
+## IAM role creation (when chosen author from scratch in lambda creation)
+1. Go to IAM → Roles → Create role.
+2. Choose **Trusted Entity: AWS Service** → Lambda.
+3. Attach **AWSLambdaBasicExecutionRole** (for logging).
+4. Attach **AmazonSQSFullAccess** (so Lambda can read from SQS).
+5. Name role `LambdaSQSTestRole`.
 
 ### 3a. Create a Lambda Function (using blueprint)
 - Go to Lambda in AWS Console
