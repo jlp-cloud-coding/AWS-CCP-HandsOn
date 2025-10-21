@@ -102,7 +102,6 @@ If you already have a domain (via free domain provider or Route 53):
 3. Delete ACM certificate (if created)  
 4. Delete the Route 53 hosted zone (if created)
 
-## Demo Preview
 ## 💡 Example URLs
  
 | Stage                          | URL Example                                                                                                |
