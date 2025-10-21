@@ -4,16 +4,21 @@ Static website hosting using:
 1) Only AWS S3 (Why not the recommended approach) 
 2) S3 + Cloudfront (recommended approach) + (Optional setup if using custom domain) Route 53 + ACM
 
+<h2>Prerequisites</h2>
+1. AWS Free Tier Account
+2. A simple static website for testing 
+- (I used a website I developed for my MSCS project: https://pavanijl.github.io)
+3. (Optional) Route 53 + ACM for custom domain setup
+
 <h1>Part1: Static website hosting using only AWS S3</h1>
 
-<h3>Overview</h3>
+<h2>Overview</h3>
 Setting up a static website using just AWS S3 bucket and no other services
 
 ## 🪣 Step 1: Create and Configure an S3 Bucket
 
 1. Go to **S3 → Create bucket**
-   - Bucket name must be **unique globally** (e.g., `my-portfolio-site`).
-   - **Region:** Choose one close to you.
+   - Bucket name: `my-static-site`.
 2. **Uncheck** “Block all public access.”
 3. Upload your website files (`index.html`, `styles.css`, `content.js`, images, etc.).
 4. Under **Properties → Static website hosting**:
@@ -21,8 +26,8 @@ Setting up a static website using just AWS S3 bucket and no other services
    - Choose **Host a static website**.
    - Enter:
      - Index document: `index.html`
-     - Error document: `index.html` or `error.html`
-5. Copy the **Bucket website endpoint** — this is your direct public website URL.
+     - Error document: `error.html` or leave blank if none
+5. Copy the **Bucket website endpoint** — this is the direct public website URL.
 
 ---
 
@@ -61,12 +66,6 @@ Disadvantages of using only S3 for static website hosting in comparision with us
 <h2>Overview</h2>
 This project demonstrates hosting a static website using **Amazon S3**, distributed securely via **Amazon CloudFront**, with optional **Route 53** DNS routing and **ACM** for SSL/TLS. This serverless architecture is designed for high availability and low latency.
 
-<h2>Prerequisites</h2>
-1. AWS Free Tier Account
-2. A simple static website for testing 
-- (I used a website I developed for my MSCS project: https://pavanijl.github.io)
-3. (Optional) Route 53 + ACM for custom domain setup
-
 ## Architecture Cloudfront → S3 → (Optional) Route 53 + ACM (Serverless) 
 
 1.  **S3:** Origin bucket enabled for Static Website Hosting, containing the core HTML, CSS, JavaScript, and image assets.
@@ -76,17 +75,11 @@ This project demonstrates hosting a static website using **Amazon S3**, distribu
 ## 🪣 Step 1: Create and Configure an S3 Bucket
 
 1. Go to **S3 → Create bucket**
-   - Bucket name must be **unique globally** (e.g., `my-demo-site`).
-   - **Region:** Choose one close to you.
-2. **Uncheck** “Block all public access.”
-3. Upload your website files (`index.html`, `styles.css`, `content.js`, images, etc.).
-4. Under **Properties → Static website hosting**:
-   - Enable *Static website hosting*.
-   - Choose **Host a static website**.
-   - Enter:
-     - Index document: `index.html`
-     - Error document: `error.html` (leave blank if none)
-5. Copy the **Bucket website endpoint** — this is the direct public website URL.
+   - Bucket name: `my-static-site`.
+   - Keep Block all public access ✅ (don’t uncheck it).
+2. Upload your static files (`index.html`, `styles.css`, `content.js`, images, etc.).
+3. Do NOT enable Static website hosting
+4. No need to add a bucket policy manually — CloudFront will use a secure identity to access the bucket..
 
 ## 🔐 Step 2: Set Bucket Policy (Make Files Public)
 
@@ -109,19 +102,21 @@ Go to **Permissions → Bucket Policy**, and paste below json:
 
 1. Go to CloudFront → Create Distribution
 2. Under Origin settings:
-   - Origin domain: Select your S3 bucket’s static website endpoint (not the default S3 bucket URL).
-   - Viewer protocol policy: Redirect HTTP to HTTPS
-3. Under Default cache behavior:
-   - Allowed HTTP methods: GET, HEAD
-4. Under Settings:
+   - Origin domain: select your S3 bucket (the plain name, not the “website endpoint”).
+Example: my-static-site.s3.us-east-1.amazonaws.com
+3. Origin Access: choose Origin Access Control (OAC).
+CloudFront will create and attach a secure OAC to access the S3 bucket
+4.Viewer Protocol Policy: Redirect HTTP to HTTPS.
+5. Cache Policy: use the CachingOptimized default.
+6. Under Settings:
    - Alternate domain name (CNAME): (optional) Add your custom domain (e.g., example.tk)
    - SSL Certificate:
       a) Select “Default CloudFront certificate (*.cloudfront.net)”
          OR
       b) Choose your issued ACM certificate (if using custom domain).
-5. Click Create distribution.
-6. Wait until the status becomes Deployed.
-7. Test your site using the CloudFront domain URL (e.g., d123abc.cloudfront.net).
+7. Click Create distribution.
+8. Wait until the status becomes Deployed.
+9. Test your site using the CloudFront domain URL (e.g., d123abc.cloudfront.net).
 
 ## 🔒 Step 4: (Optional if using custom domain) Request ACM Certificate for HTTPS
 
