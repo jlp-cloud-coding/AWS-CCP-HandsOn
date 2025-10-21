@@ -1,4 +1,4 @@
-<h1>Static website hosting using only S3 bucket</h1>
+<h1>Static website hosting using only AWS S3</h1>
 
 <h3>Overview</h3>
 Setting up a static website using just AWS S3 bucket and no other services
