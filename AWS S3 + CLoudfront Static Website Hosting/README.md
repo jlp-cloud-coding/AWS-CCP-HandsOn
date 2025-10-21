@@ -82,7 +82,7 @@ Go to **Permissions → Bucket Policy**, and paste below json:
 
 If you already have a domain (via free domain provider or Route 53):
 1. In Route 53 → Hosted zones → Create hosted zone
-   - Domain name: example.tk
+   - Domain name: mycustomsite.com
    - Type: Public hosted zone
 2. Create A record (Alias):
    - Record name: leave blank or type www
@@ -101,3 +101,14 @@ If you already have a domain (via free domain provider or Route 53):
 2. Empty and delete the S3 bucket 
 3. Delete ACM certificate (if created)  
 4. Delete the Route 53 hosted zone (if created)
+
+## Demo Preview
+## 💡 Example URLs
+ 
+| Stage                          | URL Example                                                                                                |
+| ------------------------------ | ---------------------------------------------------------------------------------------------------------- |
+| S3 Static Site                 | [http://my-bucket.s3-website-us-east-1.amazonaws.com](http://my-bucket.s3-website-us-east-1.amazonaws.com) |
+| CloudFront                     | [https://d1234abcd.cloudfront.net](https://d1234abcd.cloudfront.net)                                       |
+| Custom Domain (Route 53 + ACM) | [https://customsite.com](https://customsite.com)                                                                   |
+
+
