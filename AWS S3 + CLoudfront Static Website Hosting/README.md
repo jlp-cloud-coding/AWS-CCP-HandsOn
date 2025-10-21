@@ -1,4 +1,6 @@
-# This project contains two parts: 1) Static website hosting using only AWS S3 (Why not the recommended approach) 2) Static website hosting using S3 + Cloudfront (recommended approach)
+# This project contains two parts: 
+1) Static website hosting using only AWS S3 (Why not the recommended approach) 
+2) Static website hosting using S3 + Cloudfront (recommended approach)
 
 <h1>Part1: Static website hosting using only AWS S3</h1>
 
