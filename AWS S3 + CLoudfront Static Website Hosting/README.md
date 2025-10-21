@@ -5,9 +5,8 @@ This project demonstrates hosting a static website using **Amazon S3**, distribu
 
 <h2>Prerequisites</h2>
 1. AWS Free Tier Account
-
-2. A simple static website for testing (I used a website I developed for my MSCS project: https://pavanijl.github.io)
-
+2. A simple static website for testing 
+- (I used a website I developed for my MSCS project: https://pavanijl.github.io)
 3. (Optional) Route 53 + ACM for custom domain setup
 
 ## Architecture Cloudfront → S3 → (Optional) Route 53 + ACM (Serverless) 
