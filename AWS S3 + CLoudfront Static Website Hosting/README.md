@@ -46,7 +46,7 @@ Go to **Permissions → Bucket Policy**, and paste below json:
     }
   ]
 }
-
+```
 ## 🌍 Step 3: Create Cloudfront Distribution
 1. Go to CloudFront → Create Distribution
 
@@ -77,9 +77,7 @@ Go to **Permissions → Bucket Policy**, and paste below json:
 
 7. Test your site using the CloudFront domain URL (e.g., d123abc.cloudfront.net).
 
-## 🌍 Step 4: (Optional if using custom domain) Request ACM Certificate for HTTPS
-If using a custom domain:
-
+## 🔒 Step 4: (Optional if using custom domain) Request ACM Certificate for HTTPS
 1. Go to AWS Certificate Manager (ACM) → Request a public certificate.
 
 2. Add domain names:
@@ -99,6 +97,26 @@ If using a custom domain:
    - Paste the Name and Value from ACM.
 
 6. Once validated, ACM status changes from Pending Validation → Issued.
+
+## 🌐 Step 5: (Optional if using custom domain) Configure Route 53 for custom domain
+If you already have a domain (via free domain provider or Route 53):
+1. In Route 53 → Hosted zones → Create hosted zone
+   - Domain name: example.tk
+   - Type: Public hosted zone
+
+2. Create A record (Alias):
+   - Record name: leave blank or type www
+   - Record type: A – IPv4 address
+   - Alias: Yes
+   - Alias target: select your CloudFront distribution
+
+3. (If free domain domain):
+   - Go to Freenom → Manage Domain → Manage DNS
+   - Add Name Servers (NS) from Route 53 Hosted Zone.
+
+4. Wait for DNS propagation (can take 15–30 minutes).
+   
+5.Access your website via your custom domain (e.g., https://example.com).
 
 ## Deletion Steps
 1. Disable and Delete CloudFront distribution  
