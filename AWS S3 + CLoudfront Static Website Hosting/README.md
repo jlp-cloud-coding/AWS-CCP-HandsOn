@@ -1,6 +1,8 @@
-# This project contains two parts: 
-1) Static website hosting using only AWS S3 (Why not the recommended approach) 
-2) Static website hosting using S3 + Cloudfront (recommended approach)
+# Static website hosting using S3 + CloudFront + (Optional for custom domain) Route 53 + ACM 
+
+Static website hosting using:
+1) Only AWS S3 (Why not the recommended approach) 
+2) S3 + Cloudfront (recommended approach) + (Optional setup if using custom domain) Route 53 + ACM
 
 <h1>Part1: Static website hosting using only AWS S3</h1>
 
