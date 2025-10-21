@@ -1,0 +1,24 @@
+While doing this lab I encountered an error. After accessing the Cloudfront url, it timed out and led to "504 Gateway Timeout"
+
+Troubleshooting the 504 Gateway Timeout:
+A 504 Gateway Timeout means CloudFront successfully received the request from the viewer, but it failed to get a response from your origin (the S3 static website endpoint) within the default time limit.
+
+The most common reason for this when using an S3 Static Website Endpoint as the origin is an "Origin Protocol Policy mismatch".
+
+The Issue: 
+The S3 Static Website Endpoint only supports HTTP (port 80), not HTTPS. 
+If we set the Origin Protocol Policy in our CloudFront distribution to HTTPS Only, CloudFront will attempt to connect to S3 over HTTPS and will time out, resulting in a 504 error.
+
+The Fix:
+
+Go to the CloudFront distribution in the AWS console.
+
+Select the Origins tab and edit the S3 origin.
+
+Change the Origin Protocol Policy to HTTP Only.
+
+Why this worked: CloudFront handles the HTTPS connection with the user (viewer) at the Edge Location, but it talks to the S3 static website origin over plain HTTP.
+
+
+One more learning for Route 53:
+Alias toggle: ✅ Only used for A or AAAA records pointing to AWS resources like CloudFront or ELB. You do NOT enable alias for ACM DNS validation.(You create a CNAME record for this.)
