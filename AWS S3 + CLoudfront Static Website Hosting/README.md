@@ -6,8 +6,10 @@ Static website hosting using:
 
 <h2>Prerequisites</h2>
 1. AWS Free Tier Account
+
 2. A simple static website for testing 
 - (I used a website I developed for my MSCS project: https://pavanijl.github.io)
+
 3. (Optional) Route 53 + ACM for custom domain setup
 
 <h1>Part1: Static website hosting using only AWS S3</h1>
@@ -162,5 +164,36 @@ If you already have a domain (via free domain provider or Route 53):
 | S3 Static Site                 | [http://my-bucket.s3-website-us-east-1.amazonaws.com](http://my-bucket.s3-website-us-east-1.amazonaws.com) |
 | CloudFront                     | [https://d1234abcd.cloudfront.net](https://d1234abcd.cloudfront.net)                                       |
 | Custom Domain (Route 53 + ACM) | [https://customsite.com](https://customsite.com)                                                                   |
+## References
+Amazon S3 (Static Website Hosting)
 
+[Host a static website using Amazon S3](https://docs.aws.amazon.com/AmazonS3/latest/userguide/WebsiteHosting.html)
+
+[Granting read-only permission to an anonymous user] (https://docs.aws.amazon.com/AmazonS3/latest/userguide/WebsiteAccessPermissionsReqd.html)
+
+Amazon CloudFront
+
+[Getting started with a CloudFront web distribution] (https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/GettingStarted.html)
+
+[Using CloudFront with Amazon S3] (https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/DownloadDistS3AndCustomOrigins.html)
+
+[Using alternate domain names (CNAMEs)] (https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/CNAMEs.html)
+
+AWS Certificate Manager (ACM)
+
+[Requesting a public certificate] (https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-request-public.html)
+
+[Validating domain ownership with DNS] (https://docs.aws.amazon.com/acm/latest/userguide/dns-validation.html)
+
+Amazon Route 53
+
+[Registering domain names using Route 53] (https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/domain-register.html)
+
+[Routing traffic to an Amazon CloudFront distribution] (https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-to-cloudfront-distribution.html)
+
+[Creating records by using the Route 53 console] (https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resource-record-sets-creating.html)
+
+AWS Official Tutorials
+
+[Tutorial: Configuring a static website using a custom domain registered with Route 53] (https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/getting-started-cloudfront-overview.html)
 
