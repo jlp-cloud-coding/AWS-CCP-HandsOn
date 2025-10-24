@@ -77,8 +77,8 @@ This project demonstrates hosting a static website using **Amazon S3**, distribu
 ## Architecture Diagram
 Note: Diagram created using draw.io ([diagrams.net](https://app.diagrams.net/)) with AWS icon library enabled.
 
-[Architecture Diagram](./s3-cloudfront-static-website.png)  
-Editable file: [`architecture-diagram.drawio`](./s3-cloudfront-static-website.drawio)
+[Architecture Diagram for static website hosting using S3 + Cloudfront](./s3-cloudfront-static-website.png)  
+
 
 ## 🪣 Step 1: Create and Configure an S3 Bucket
 
