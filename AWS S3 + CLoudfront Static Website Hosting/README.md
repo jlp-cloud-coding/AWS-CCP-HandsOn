@@ -74,6 +74,12 @@ This project demonstrates hosting a static website using **Amazon S3**, distribu
 2.  **CloudFront:** Content Delivery Network (CDN) that globally caches website content at Edge Locations for high-speed delivery and uses a secure SSL/TLS connection.
 3.  **Route 53 + ACM:** Used to manage the **Custom Domain DNS** records and provision a **free SSL/TLS certificate** (via ACM) for HTTPS on CloudFront.
 
+## Architecture Diagram
+
+![Architecture Diagram](./S3 + Cloudfront static website hosting.png)
+You can view or edit the original diagram using [draw.io](https://app.diagrams.net/).  
+Editable file: [`architecture-diagram.drawio`](./S3 + Cloudfront static website hosting.drawio)
+
 ## 🪣 Step 1: Create and Configure an S3 Bucket
 
 1. Go to **S3 → Create bucket**
