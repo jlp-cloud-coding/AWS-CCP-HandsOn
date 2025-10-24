@@ -1,0 +1,87 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36" version="28.2.8">
+  <diagram name="Page-1" id="sW8la8vC_et587EKLUe-">
+    <mxGraphModel dx="1966" dy="1301" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="wxZgPRsiFqEUOYRTkQIe-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="wxZgPRsiFqEUOYRTkQIe-1" target="wxZgPRsiFqEUOYRTkQIe-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wxZgPRsiFqEUOYRTkQIe-1" value="" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;fontColor=#4277BB;labelBackgroundColor=default;fontSize=12;spacingTop=3;image=img/lib/ibm/users/browser.svg;" vertex="1" parent="1">
+          <mxGeometry x="10" y="134" width="81" height="81" as="geometry" />
+        </mxCell>
+        <mxCell id="wxZgPRsiFqEUOYRTkQIe-2" value="End User / Browser" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-50" y="204" width="219.25" height="37.5" as="geometry" />
+        </mxCell>
+        <mxCell id="wxZgPRsiFqEUOYRTkQIe-3" value="Amazon Route 53" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#ffffff;fillColor=#232F3E;dashed=0;verticalLabelPosition=middle;verticalAlign=bottom;align=center;html=1;whiteSpace=wrap;fontSize=10;fontStyle=1;spacing=3;shape=mxgraph.aws4.productIcon;prIcon=mxgraph.aws4.route_53;" vertex="1" parent="1">
+          <mxGeometry x="240" y="119.5" width="90" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="wxZgPRsiFqEUOYRTkQIe-5" value="" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#8C4FFF;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.cloudfront;" vertex="1" parent="1">
+          <mxGeometry x="450" y="126" width="78" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="wxZgPRsiFqEUOYRTkQIe-6" value="Cloudfront" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="446.5" y="190" width="81" height="54.5" as="geometry" />
+        </mxCell>
+        <mxCell id="wxZgPRsiFqEUOYRTkQIe-9" value="Amazon S3" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#ffffff;fillColor=#232F3E;dashed=0;verticalLabelPosition=middle;verticalAlign=bottom;align=center;html=1;whiteSpace=wrap;fontSize=10;fontStyle=1;spacing=3;shape=mxgraph.aws4.productIcon;prIcon=mxgraph.aws4.s3;" vertex="1" parent="1">
+          <mxGeometry x="680" y="115" width="80" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="wxZgPRsiFqEUOYRTkQIe-10" value="AWS Certificate Manager" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#ffffff;fillColor=#232F3E;dashed=0;verticalLabelPosition=middle;verticalAlign=bottom;align=center;html=1;whiteSpace=wrap;fontSize=10;fontStyle=1;spacing=3;shape=mxgraph.aws4.productIcon;prIcon=mxgraph.aws4.certificate_manager_3;" vertex="1" parent="1">
+          <mxGeometry x="385" y="350" width="80" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="wxZgPRsiFqEUOYRTkQIe-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="wxZgPRsiFqEUOYRTkQIe-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="320" y="160" as="sourcePoint" />
+            <mxPoint x="450" y="175" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wxZgPRsiFqEUOYRTkQIe-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="wxZgPRsiFqEUOYRTkQIe-5" target="wxZgPRsiFqEUOYRTkQIe-9">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="560" y="160" as="sourcePoint" />
+            <mxPoint x="680" y="160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wxZgPRsiFqEUOYRTkQIe-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="wxZgPRsiFqEUOYRTkQIe-5" target="wxZgPRsiFqEUOYRTkQIe-10">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="460" y="270" as="sourcePoint" />
+            <mxPoint x="580" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wxZgPRsiFqEUOYRTkQIe-32" value="HTTPS secured via ACM" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="wxZgPRsiFqEUOYRTkQIe-15">
+          <mxGeometry x="0.2161" y="-1" relative="1" as="geometry">
+            <mxPoint x="1" y="-5" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wxZgPRsiFqEUOYRTkQIe-20" value="DNS Routing (Custom Domain)" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="230" y="85" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wxZgPRsiFqEUOYRTkQIe-21" value="(optional)" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="250" y="220" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wxZgPRsiFqEUOYRTkQIe-22" value="Content Delivery Network (CDN)" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="436" y="90" width="102" height="29.5" as="geometry" />
+        </mxCell>
+        <mxCell id="wxZgPRsiFqEUOYRTkQIe-23" value="Static Website Bucket (Origin)" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="630" y="85" width="210" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wxZgPRsiFqEUOYRTkQIe-24" value="SSL Certificate for HTTPS" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="375" y="460" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wxZgPRsiFqEUOYRTkQIe-28" value="Hosts the static html, css, js and other media files" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="652.5" y="220" width="135" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wxZgPRsiFqEUOYRTkQIe-29" value="DNS lookup (mydomain.com)" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="100" y="140" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wxZgPRsiFqEUOYRTkQIe-30" value="Routes traffic to CloudFront Distribution" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="330" y="134" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wxZgPRsiFqEUOYRTkQIe-31" value="Fetches static content from S3 origin" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="527.5" y="134" width="152.5" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wxZgPRsiFqEUOYRTkQIe-33" value="&lt;h1&gt;Static Website Hosting on AWS using S3 and CloudFront&lt;/h1&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="160" y="10" width="520" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
