@@ -18,7 +18,8 @@ presence of keyword "AWS" in the message
 3. CloudWatch Logs – captures Lambda execution logs
 
 ## Architecture Diagram
-![Lambda-SQS Architecture Diagram](./Lamda-SQS-architecture-diagram.png)
+Archirecture diagram was created using draw.io tool
+[Lambda-SQS Architecture Diagram](./Lamda-SQS-architecture-diagram.png)
 
 ## Steps / Procedure
 
