@@ -17,6 +17,9 @@ presence of keyword "AWS" in the message
 2. Lambda Function – reads/polls messages from SQS and processes them
 3. CloudWatch Logs – captures Lambda execution logs
 
+## Architecture Diagram
+[Lambda-SQS-architecture-diagram] (./Lamda-SQS-architecture-diagram.png)
+
 ## Steps / Procedure
 
 ### 1. Create an SQS Queue
